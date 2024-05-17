@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MagicLifeCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="display" translatesAutoresizingMaskIntoConstraints="NO" id="Afo-5U-BRI" userLabel="display">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rit-BJ-0Pa" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="puv-CM-Xeq" userLabel="Enemy Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="379.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMP-kh-ZGL" userLabel="RedPlus">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="126.66666666666667"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="redPlus"/>
+                                                <connections>
+                                                    <action selector="redPlusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doj-Qd-VTE"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIh-Ga-4sz" userLabel="EnemyLifeLabel">
+                                                <rect key="frame" x="0.0" y="126.66666666666666" width="393" height="126.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                                <color key="textColor" red="0.49301304768041232" green="0.19670154196871997" blue="0.19608853005720614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmN-Of-vxZ" userLabel="RedMinus">
+                                                <rect key="frame" x="0.0" y="252.99999999999997" width="393" height="126.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="redMinus"/>
+                                                <connections>
+                                                    <action selector="redMinusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S7B-AB-9up"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V1C-ku-SaJ" userLabel="My Stack View">
+                                        <rect key="frame" x="0.0" y="379.66666666666674" width="393" height="379.33333333333326"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjH-Fa-Af2" userLabel="BluePlus">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="126.33333333333333"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="bluePlus"/>
+                                                <connections>
+                                                    <action selector="bluePlusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfO-Hi-cDs"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiZ-6h-aOa" userLabel="MyLifeLabel">
+                                                <rect key="frame" x="0.0" y="126.33333333333331" width="393" height="126.66666666666669"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                                <color key="textColor" red="0.21965955296510664" green="0.32069390511146389" blue="0.40010873067010311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbz-GZ-VVX" userLabel="BlueMinus">
+                                                <rect key="frame" x="0.0" y="252.99999999999997" width="393" height="126.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="blueMinus"/>
+                                                <connections>
+                                                    <action selector="blueMinusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ug2-YP-0Oe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Afo-5U-BRI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aju-bp-8Oc"/>
+                            <constraint firstItem="rit-BJ-0Pa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EGh-w0-mYU"/>
+                            <constraint firstItem="Afo-5U-BRI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EM5-LM-EoV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rit-BJ-0Pa" secondAttribute="bottom" id="Upb-UC-jPT"/>
+                            <constraint firstItem="rit-BJ-0Pa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yja-Vn-eu5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rit-BJ-0Pa" secondAttribute="trailing" id="id0-0q-gJu"/>
+                            <constraint firstAttribute="bottom" secondItem="Afo-5U-BRI" secondAttribute="bottom" id="oqg-wc-q6a"/>
+                            <constraint firstAttribute="trailing" secondItem="Afo-5U-BRI" secondAttribute="trailing" id="ttj-LJ-6th"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enemyLifeLabel" destination="MIh-Ga-4sz" id="vbM-an-MRm"/>
+                        <outlet property="myLifeLabel" destination="TiZ-6h-aOa" id="nn9-tl-pEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.770992366412212" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blueMinus" width="88" height="88"/>
+        <image name="bluePlus" width="88" height="88"/>
+        <image name="display" width="375" height="812"/>
+        <image name="redMinus" width="88" height="88"/>
+        <image name="redPlus" width="88" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
